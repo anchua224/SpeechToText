@@ -1,4 +1,6 @@
 # Speech To Text
+
+## Description
 Due to the problems encountered using the previous STT program, we opted to develop a new program using new Python libraries that have developed in the recent years. We decided to use the OpenAI Whisper library, which is a speech-recognition library whose open-source models are trained on thousands of hours of multi-lingual data. The library offers the ability to transcribe text from audio, as well as translate transcriptions into other languages. More information about Whisper could be found on [OpenAI](https://openai.com/research/whisper).
 
 ## Requirements
