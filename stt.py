@@ -14,12 +14,13 @@ import time
 start_time = time.time()
 
 # TODO: Help menu for command-line arguments
-# -h, --help -> display help menu
-# -i, --input -> specify input audio file
-# -o, --output -> specify output file name & directory
+# -h, --help    -> display help menu
+# -i, --input   -> specify input audio file
+# -o, --output  -> specify output file name & directory
 # OPTIONAL ADDITIONAL ARGUMENTS
-# --language -> specify language (input and/or output)
-#               (see whisper language capabilities)
+# --language    -> specify language (input and/or output)
+#                  (see whisper language capabilities)
+# --model       -> set transcription model
 #
 
 # Using base whisper model
@@ -39,11 +40,17 @@ if (sys.argv[1].split("."))[1] != "mp4":
 filepath = sys.argv[1]
 if os.path.exists(filepath):
     print("Preparing to transcribe " + os.path.basename(filepath) + " audio to text...")
+else:
+    print(os.path.basename(filepath)+" not found.")
+    sys.exit(1)
 
 # Transcribe audio file
 result = model.transcribe(filepath, fp16=False)
 # Parse result for audio transcription
 lines = result['text']
+if len(lines) == 0:
+    print("Error transcribing audio.")
+    sys.exit(1)
 
 # Write the transcription to a file using UTF-8 encoding
 # TODO: change so output path can be specified, else default
