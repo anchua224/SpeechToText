@@ -2,7 +2,7 @@
 #       - Abstract text from audio file
 #       - Calculate program execution time
 
-# Author: Ala Chua
+# Authors: Ala Chua, Jie Yao, Chris Wells, Brad Keiser
 # Version: 0.1
 # Last Modified: 09/7/23
 import os
