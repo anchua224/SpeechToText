@@ -18,7 +18,7 @@ Pass the file path for the audio file though the command line.
 ```bash
 python stt.py path/to/audiofile
 ```
-The generated text transcriptions are sent to /output.
+The generated text transcriptions are sent to /text.
 
 ## Contributing Authors
 Lehigh - Fall 2023
