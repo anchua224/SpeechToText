@@ -7,16 +7,16 @@ Due to the problems encountered using the previous STT program, we opted to deve
 
 This program currently uses Python version 3.10.4.
 
-To use the whisper import, pip install OpenAI whisper.
+The library requirements needed for this python program are in requirements.txt. To install these libraries, use the following command:
 ```bash
-pip install git+https://github.com/openai/whisper.git 
+$ pip install -r requirements.txt
 ```
-
+The whisper library must be installed specifically from the OpenAI Whisper Git repository. This is specified in requirements.txt.
 
 ## Usage
 Pass the file path for the audio file though the command line. 
 ```bash
-python stt.py path/to/audiofile
+$ python stt.py path/to/audiofile
 ```
 The generated text transcriptions are sent to /text.
 
