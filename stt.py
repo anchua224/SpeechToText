@@ -32,9 +32,9 @@ if len(sys.argv) <= 1:
     print("Insufficient arguments. Exiting program.")
     sys.exit(1)
 # Error check file type (must be audio file)
-if (sys.argv[1].split("."))[1] != "mp4":
-    print("Invalid file type. Audio file must be *.mp4")
-    sys.exit(1)
+# if (sys.argv[1].split("."))[1] != "mp4":
+#     print("Invalid file type. Audio file must be *.mp4")
+#     sys.exit(1)
 
 # Load the audio file
 filepath = sys.argv[1]
